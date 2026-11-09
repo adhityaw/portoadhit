@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hack Lab | Adhit.DEV</title>
+  <meta name="description" content="Hack Lab: lab belajar hacking untuk pemula. Misi CTF, terminal simulasi, dan kamus hacker. Aman dan legal, semuanya jalan di browser.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lab.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- ============ SVG LIBRARY ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14m0 0-6-6m6 6 6-6"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" stroke-linejoin="round"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.2 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+    <symbol id="i-term" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></symbol>
+
+    <!-- Bit, maskot Hack Lab (karakter original) -->
+    <symbol id="bit" viewBox="0 0 200 200">
+      <g stroke="#111" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M14 204 C16 152 54 134 100 134 C146 134 184 152 186 204Z" fill="#9B5DE5"/>
+        <path d="M88 138v26M112 138v26" stroke-width="4" fill="none"/>
+        <circle cx="88" cy="167" r="5" fill="#FFD93D"/><circle cx="112" cy="167" r="5" fill="#FFD93D"/>
+        <path d="M36 92C36 44 66 18 100 18s64 26 64 74c0 36-30 58-64 58s-64-22-64-58Z" fill="#9B5DE5"/>
+        <path d="M56 94C56 66 76 48 100 48s44 18 44 46c0 26-20 42-44 42S56 120 56 94Z" fill="#111"/>
+        <rect x="64" y="80" width="30" height="20" rx="6" fill="#6BCB77"/>
+        <rect x="106" y="80" width="30" height="20" rx="6" fill="#6BCB77"/>
+        <path d="M94 90h12" fill="none"/>
+        <path d="M71 86h7M113 86h7" stroke="#fff" stroke-width="4" fill="none"/>
+        <path d="M82 117Q100 131 118 117" stroke="#fff" stroke-width="4.5" fill="none"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="index.html" aria-label="Kembali ke portfolio">Adhit<b>.DEV</b></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#missions">Misi</a><a href="#terminal">Terminal</a><a href="#glossary">Kamus</a><a href="#roadmap">Roadmap</a>
+    </nav>
+    <a class="cta keep" href="index.html"><span>Portfolio</span><svg class="ico" style="font-size:15px"><use href="#i-ur"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menu</button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#missions">Misi</a><a href="#terminal">Terminal</a><a href="#glossary">Kamus</a><a href="#roadmap">Roadmap</a><a href="index.html">Portfolio</a>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="sec hero" id="home">
+  <div class="in hero-grid">
+    <div>
+      <span class="badge">🔓 Safe sandbox · 100% legal</span>
+      <h1 class="hero-title">
+        <span class="ln">Hack.</span>
+        <span class="ln out">Learn.</span>
+        <span class="ln">Repeat.</span>
+      </h1>
+      <p class="lead">Lab hacking buat pemula. 10 misi seru, terminal simulasi, dan nol risiko. Semuanya jalan di browser kamu.</p>
+      <div class="hero-btns">
+        <a class="btn coral" href="#missions" style="--rh:-2deg">Mulai Misi <svg class="ico"><use href="#i-down"/></svg></a>
+        <a class="btn" href="#terminal" style="--rh:2deg">Buka Terminal <svg class="ico"><use href="#i-term"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="ring" id="bit" role="img" aria-label="Bit, maskot Hack Lab"><svg viewBox="0 0 200 200"><use href="#bit"/></svg></div>
+      <div class="bubble" id="bubble">Hai! Aku Bit. Yuk cari flag pertamamu.</div>
+      <div class="fl code"><svg class="ico"><use href="#i-code"/></svg></div>
+      <div class="fl pill">FLAG{...}</div>
+      <div class="fl bolt"><svg class="ico fill" style="stroke:var(--ink);stroke-width:2"><use href="#i-bolt"/></svg></div>
+    </div>
+  </div>
+  <div class="scroll" aria-hidden="true">SCROLL<i><svg class="ico"><use href="#i-down"/></svg></i></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="mq dark" aria-hidden="true">
+  <div class="track"><div class="grp">
+    <span class="c1">Ethical Only</span><i></i><span class="c2">Jalan di Browser</span><i></i><span class="c3">10 Misi</span><i></i><span class="c4">Zero Risk</span><i></i><span class="c5">Try Harder</span><i></i><span class="c6">Capture The Flag</span><i></i>
+  </div></div>
+</div>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec how" id="how">
+  <div class="in">
+    <span class="pill-g reveal">Cara Main</span>
+    <h2 class="h2 reveal" style="text-align:center">How It <span class="out">Works</span></h2>
+    <div class="steps">
+      <div class="step reveal" style="--rot:-1.2deg"><span class="no" style="background:var(--yellow)">1</span><h3>Pilih Misi</h3><p>Ada 10 misi dari yang gampang sampai yang bikin mikir. Mulai dari yang hijau.</p></div>
+      <div class="step reveal" style="--rot:.8deg"><span class="no" style="background:var(--blue);color:#fff">2</span><h3>Cari Flag</h3><p>Flag selalu berbentuk <code>FLAG{...}</code>. Bongkar, tebak, utak-atik sampai ketemu.</p></div>
+      <div class="step reveal" style="--rot:-.6deg"><span class="no" style="background:var(--green)">3</span><h3>Kirim &amp; Naik Rank</h3><p>Flag benar dapat XP. Kumpulin XP dari Noob sampai Root.</p></div>
+    </div>
+    <div class="rules reveal" style="--rot:.5deg">
+      <svg class="ico" style="font-size:34px"><use href="#i-shield"/></svg>
+      <div><b>Aturan main</b><p>Semua target di sini palsu dan jalan di browser kamu. Teknik yang kamu pelajari hanya boleh dipakai di sistem milik sendiri atau yang memberi izin tertulis. Menyerang sistem orang lain tanpa izin itu melanggar hukum (UU ITE).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSIONS ============ -->
+<section class="sec missions" id="missions">
+  <div class="in">
+    <h2 class="h2 sh reveal">Pilih<br><span class="y">Misimu.</span></h2>
+
+    <div class="hud reveal">
+      <div class="hud-l">
+        <span class="rank-pill" id="rankName">Noob</span>
+        <div class="hud-stats"><b id="xpNow">0</b> / <span id="xpMax">0</span> XP &middot; <b id="solvedN">0</b>/<span id="totalN">0</span> misi</div>
+      </div>
+      <form class="flagform" id="flagForm" autocomplete="off">
+        <label class="sr" for="flagIn">Kirim flag</label>
+        <input id="flagIn" placeholder="FLAG{...}" spellcheck="false" autocapitalize="off">
+        <button class="btn coral sm" type="submit">Kirim Flag</button>
+      </form>
+      <div class="xp" id="xpBar" role="progressbar" aria-label="Progres XP" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="xpFill"></i></div>
+      <div class="hud-foot"><span id="nextRank"></span><button type="button" class="reset" id="resetBtn">Reset progres</button></div>
+    </div>
+
+    <div class="mgrid" id="mgrid"></div>
+  </div>
+</section>
+
+<!-- ============ TERMINAL ============ -->
+<section class="sec termsec" id="terminal">
+  <div class="in">
+    <h2 class="h2 reveal" style="color:#fff">Terminal <span class="y">Playground</span></h2>
+    <p class="term-sub">Terminal simulasi buat latihan. Aman, nggak nyentuh komputer kamu. Ketik <code>help</code> buat mulai.</p>
+    <div class="term-grid">
+      <div class="reveal" style="--rot:-.4deg">
+        <div class="term" id="term">
+          <div class="term-bar"><i></i><i></i><i></i><span>hacker@hacklab</span></div>
+          <div class="term-out" id="termOut" role="log" aria-live="polite"></div>
+          <form class="term-in" id="termForm" autocomplete="off">
+            <label class="ps" id="termPs" for="termIn"><span class="ps-host">hacker@hacklab:</span><span id="psPath">~</span>$</label>
+            <input id="termIn" spellcheck="false" autocapitalize="off" autocorrect="off" aria-label="Perintah terminal">
+          </form>
+        </div>
+        <div class="qchips" aria-label="Perintah cepat">
+          <button type="button" data-cmd="help">help</button>
+          <button type="button" data-cmd="ls -a">ls -a</button>
+          <button type="button" data-cmd="cat readme.txt">cat readme.txt</button>
+         <button type="button" data-cmd="nmap demo.local">nmap demo.local</button>
+          <button type="button" data-cmd="neofetch">neofetch</button>
+          <button type="button" data-cmd="clear">clear</button>
+        </div>
+      </div>
+      <aside class="cheat reveal" style="--rot:1deg">
+        <h3>Contekan</h3>
+        <dl>
+          <dt>ls -a</dt><dd>lihat isi folder (termasuk yang tersembunyi)</dd>
+          <dt>cd, pwd</dt><dd>pindah folder, lihat posisi</dd>
+          <dt>cat file</dt><dd>baca isi file</dd>
+          <dt>nmap ip</dt><dd>cari port yang terbuka</dd>
+          <dt>nc ip port</dt><dd>sapa sebuah port</dd>
+          <dt>sha256 teks</dt><dd>hitung hash</dd>
+          <dt>base64 teks</dt><dd>encode (pakai -d buat decode)</dd>
+          <dt>submit FLAG</dt><dd>kirim flag dari sini</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOSSARY ============ -->
+<section class="sec gloss" id="glossary">
+  <div class="in">
+    <span class="pill-g reveal">Kamus Hacker</span>
+    <h2 class="h2 reveal" style="text-align:center">Hacker <span class="out">Dictionary</span></h2>
+    <p class="sub-c">Klik kartu buat lihat artinya.</p>
+    <div class="gl" id="gl"></div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="sec exp" id="roadmap">
+  <div class="in">
+    <h2 class="h2 sh reveal">Roadmap Belajar</h2>
+    <div class="tl">
+      <div class="job reveal">
+        <span class="date">Langkah 1</span>
+        <h3>Dasar Linux &amp; Terminal</h3>
+        <div class="co" style="color:var(--blue)">Fondasi semua hacker</div>
+        <p>Belajar pindah folder, baca file, dan atur izin. Hampir semua tools keamanan jalan di Linux.</p>
+        <div class="links"><a class="btn sm" href="https://overthewire.org/wargames/bandit/" target="_blank" rel="noopener noreferrer">OverTheWire Bandit <svg class="ico"><use href="#i-ur"/></svg></a><a class="btn sm" href="https://linuxjourney.com" target="_blank" rel="noopener noreferrer">Linux Journey <svg class="ico"><use href="#i-ur"/></svg></a></div>
+      </div>
+      <div class="job reveal">
+        <span class="date">Langkah 2</span>
+        <h3>Jaringan</h3>
+        <div class="co" style="color:var(--green)">TCP/IP, DNS, HTTP</div>
+        <p>Pahami bagaimana data berjalan dari browser ke server. Tanpa ini, hasil scan cuma deretan angka.</p>
+        <div class="links"><a class="btn sm" href="https://tryhackme.com" target="_blank" rel="noopener noreferrer">TryHackMe <svg class="ico"><use href="#i-ur"/></svg></a></div>
+      </div>
+      <div class="job reveal">
+        <span class="date">Langkah 3</span>
+        <h3>Keamanan Web</h3>
+        <div class="co" style="color:var(--orange)">OWASP Top 10</div>
+        <p>Kenali celah paling umum seperti SQL injection, XSS, dan autentikasi lemah, lalu belajar menutupnya.</p>
+        <div class="links"><a class="btn sm" href="https://portswigger.net/web-security" target="_blank" rel="noopener noreferrer">PortSwigger Academy <svg class="ico"><use href="#i-ur"/></svg></a><a class="btn sm" href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">OWASP Top 10 <svg class="ico"><use href="#i-ur"/></svg></a></div>
+      </div>
+      <div class="job reveal">
+        <span class="date">Langkah 4</span>
+        <h3>Latihan CTF</h3>
+        <div class="co" style="color:var(--coral)">Capture The Flag</div>
+        <p>Asah skill lewat soal-soal bertingkat. Mulai dari kategori mudah, lalu naik pelan-pelan.</p>
+        <div class="links"><a class="btn sm" href="https://picoctf.org" target="_blank" rel="noopener noreferrer">picoCTF <svg class="ico"><use href="#i-ur"/></svg></a><a class="btn sm" href="https://www.hackthebox.com" target="_blank" rel="noopener noreferrer">Hack The Box <svg class="ico"><use href="#i-ur"/></svg></a></div>
+      </div>
+      <div class="job reveal">
+        <span class="date">Langkah 5</span>
+        <h3>Bug Bounty &amp; VDP Resmi</h3>
+        <div class="co" style="color:var(--purple)">Legal dan dibayar</div>
+        <p>Cari celah hanya di program yang memberi izin tertulis, lalu laporkan dengan sopan. Jangan lupa baca aturan programnya.</p>
+        <div class="links"><a class="btn sm" href="https://www.hackerone.com" target="_blank" rel="noopener noreferrer">HackerOne <svg class="ico"><use href="#i-ur"/></svg></a><a class="btn sm" href="https://www.bugcrowd.com" target="_blank" rel="noopener noreferrer">Bugcrowd <svg class="ico"><use href="#i-ur"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="sec contact" id="contact">
+  <div class="bg2"></div>
+  <div class="in">
+    <h2 class="h2 reveal"><span class="w">Ada Ide</span><span class="b">Misi Baru?</span></h2>
+    <p>Lab ini terus ditambah. Kirim ide misi, temuan bug, atau sekadar bilang halo.</p>
+    <div class="contact-btns">
+      <a class="cbtn w" href="index.html#contact"><svg class="ico" style="font-size:18px"><use href="#i-chat"/></svg> Kirim Ide</a>
+      <a class="cbtn p" href="index.html"><svg class="ico" style="font-size:18px"><use href="#i-ur"/></svg> Ke Portfolio</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="big" aria-hidden="true">HACK</div>
+  <div class="foot-in">
+    <a class="flogo" href="index.html"><span>Adhit<span style="opacity:.55">.DEV</span></span><span class="sm" aria-hidden="true">☺</span></a>
+    <small>© 2026 Hack Lab · buat belajar, bukan buat jahat</small>
+    <button class="top" id="topBtn" aria-label="Kembali ke atas"><svg class="ico"><use href="#i-up"/></svg></button>
+  </div>
+</footer>
+
+<!-- ============ MISSION DIALOG ============ -->
+<dialog id="mDlg" class="mdlg" aria-labelledby="mTitle">
+  <div class="mdlg-in">
+    <button type="button" class="dclose" id="mClose" aria-label="Tutup"><svg class="ico"><use href="#i-x"/></svg></button>
+    <div class="mdlg-top"><span class="tag" id="mCat"></span><span class="dpill" id="mDiff"></span><span class="xp-tag" id="mXp"></span></div>
+    <h3 id="mTitle"></h3>
+    <p class="mstory" id="mStory"></p>
+    <div class="mbody" id="mBody"></div>
+    <div class="mhints"><ol id="mHints"></ol><button type="button" class="btn sm" id="mHintBtn"></button></div>
+    <form class="flagform" id="mFlagForm" autocomplete="off">
+      <label class="sr" for="mFlagIn">Flag</label>
+      <input id="mFlagIn" placeholder="FLAG{...}" spellcheck="false" autocapitalize="off">
+      <button class="btn coral sm" type="submit">Kirim Flag</button>
+    </form>
+    <div class="mdone" id="mDone" hidden></div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/lab.js"></script>
+</body>
+</html>

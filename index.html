@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adhitya Wardantika</title>
+  <meta name="description" content="Portfolio of Adhitya Wardantika, frontend developer and UI/UX designer.">
+
+  <!-- Fonts: Space Grotesk (headings), Inter (body), Outfit (hero text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ai.css">
+
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- ============ SVG LIBRARY (icons, avatar, laptop frame) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12Z"/></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z" stroke-linejoin="round"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14m0 0-6-6m6 6 6-6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.2 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" stroke-linejoin="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+
+    <!-- original cartoon avatar (shoulders + head) -->
+    <symbol id="avatar" viewBox="0 0 300 300">
+      <g stroke="#111" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M6 302 C10 248 66 216 150 216 C234 216 290 248 294 302 Z" fill="#fff"/>
+        <g fill="#111" stroke="none">
+          <circle cx="52" cy="272" r="9"/><circle cx="96" cy="250" r="7"/><ellipse cx="86" cy="288" rx="10" ry="8"/>
+          <circle cx="148" cy="278" r="10"/><circle cx="196" cy="252" r="7"/><ellipse cx="214" cy="288" rx="10" ry="8"/>
+          <circle cx="250" cy="270" r="9"/><circle cx="170" cy="300" r="8"/><circle cx="118" cy="302" r="8"/>
+        </g>
+        <path d="M128 182 L128 224 C138 236 162 236 172 224 L172 182 Z" fill="#FFE2C6"/>
+        <path d="M116 214 L146 244 L126 256 L100 226 Z" fill="#fff"/>
+        <path d="M184 214 L154 244 L174 256 L200 226 Z" fill="#fff"/>
+        <ellipse cx="99" cy="140" rx="9" ry="14" fill="#FFE2C6"/>
+        <ellipse cx="201" cy="140" rx="9" ry="14" fill="#FFE2C6"/>
+        <path d="M100 126 C100 90 124 80 150 80 C176 80 200 90 200 126 C200 166 178 194 150 194 C122 194 100 166 100 126Z" fill="#FFE2C6"/>
+        <path d="M95 130 C82 84 110 50 150 52 C166 34 206 44 208 84 C214 102 210 120 205 136 C199 113 187 101 168 97 C150 113 118 111 95 130Z" fill="#111"/>
+        <ellipse cx="129" cy="140" rx="8" ry="10" fill="#fff"/>
+        <ellipse cx="172" cy="140" rx="8" ry="10" fill="#fff"/>
+        <circle cx="131" cy="142" r="3.6" fill="#111" stroke="none"/>
+        <circle cx="174" cy="142" r="3.6" fill="#111" stroke="none"/>
+        <path d="M117 122 Q128 114 140 120M160 120 Q172 114 184 122" fill="none" stroke-width="4"/>
+        <path d="M150 148 Q145 162 153 164" fill="none" stroke-width="3.5"/>
+        <ellipse cx="152" cy="178" rx="5.5" ry="7" fill="#111"/>
+      </g>
+    </symbol>
+
+    <!-- laptop frame used by the project cards -->
+    <g id="laptop">
+      <rect x="52" y="14" width="256" height="166" rx="10" fill="#1a1a1a"/>
+      <rect x="60" y="22" width="240" height="150" rx="3" fill="#f3efe8"/>
+      <path d="M22 182h316l-8 14a6 6 0 0 1-5 3H35a6 6 0 0 1-5-3z" fill="#cfcfcf"/>
+      <rect x="148" y="182" width="64" height="5" rx="2.5" fill="#9b9b9b"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="#home" aria-label="Back to top">Adhit<b>.DEV</b></a>
+    <nav class="nav" aria-label="Main">
+  <a href="#about">About</a>
+<a href="#work">Work</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+<a href="lab.html">Hack Lab ↗</a>
+</nav>
+    <a class="cta" href="#contact"><span>Let's Talk</span><svg class="ico" style="font-size:15px"><use href="#i-chat"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav">Menu</button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a><a href="lab.html">Hack Lab ↗</a>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="sec hero" id="home">
+  <div class="in hero-grid">
+    <div>
+      <span class="badge">👋 Hello, I am Adhitya</span>
+      <h1 class="hero-title">
+        <span class="ln">I Build</span>
+        <span class="ln out">Cool</span>
+        <span class="ln">Stuff.</span>
+      </h1>
+      <p class="lead">Cyber Security &amp; Backend Developer who loves building bold, interactive digital experiences.</p>
+      <div class="hero-btns">
+        <a class="btn coral" href="#work" style="--rh:-2deg">View Projects <svg class="ico"><use href="#i-ur"/></svg></a>
+        <a class="btn" href="#" id="cvBtn" style="--rh:2deg">Download CV <svg class="ico"><use href="#i-dl"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="ring"><img src="assets/images/adhitya.jpeg" alt="Foto Adhitya"></div>
+      <div class="fl code"><svg class="ico" style="width:1em;height:1em"><use href="#i-code"/></svg></div>
+      <div class="fl pill">CYBER</div>
+      <div class="fl bolt"><svg class="ico fill" style="stroke:var(--ink);stroke-width:2"><use href="#i-bolt"/></svg></div>
+    </div>
+  </div>
+  <div class="scroll" aria-hidden="true">SCROLL<i><svg class="ico"><use href="#i-down"/></svg></i></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec about" id="about">
+  <div class="in">
+    <h2 class="h2 sh reveal">About<br><span class="y">The Dev.</span></h2>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <p>Saya tidak hanya menulis kode, saya membangun sistem digital yang aman. Dengan fokus pada Cyber Security dan Backend Engineering, saya menggabungkan logika, keamanan, dan teknologi untuk menciptakan solusi digital yang efisien dan terpercaya.</p>
+        <p>Behind every great digital experience, there's a secure and powerful system.</p>
+        <hr>
+        <div class="who">
+          <div class="mini"><img src="assets/images/adhitya.jpeg" alt="Foto Adhitya"></div>
+          <div><b>Adhitya Wardantika</b><small>Cyber Security</small></div>
+        </div>
+      </div>
+      <!-- dummy numbers: replace with your own -->
+      <div class="stats">
+        <div class="stat y reveal" style="--rot:-2deg"><span class="n"><span class="count" data-to="3">3</span>+</span><span class="l">Years Exp</span></div>
+        <div class="stat p reveal" style="--rot:2.5deg"><span class="n"><span class="count" data-to="42">42</span></span><span class="l">Projects Shipped</span></div>
+        <div class="stat w reveal" style="--rot:-1deg"><span class="n"><span class="count" data-to="12">12</span></span><span class="l">Awards Won</span></div>
+        <div class="stat o reveal" style="--rot:1.5deg"><span class="n">∞</span><span class="l">Coffees Drank</span></div>
+      </div>
+    </div>
+    <svg class="deco ast" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" aria-hidden="true"><path d="M50 8v84M13.6 29l72.8 42M13.6 71l72.8-42"/></svg>
+    <svg class="deco star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.2 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg>
+  </div>
+</section>
+
+<!-- ============ MARQUEE (tech) ============ -->
+<div class="mq dark" aria-hidden="true">
+  <div class="track"><div class="grp">
+    <span class="c1">JavaScript</span><i></i><span class="c2">Python</span><i></i><span class="c3">Pentesting</span><i></i><span class="c4">Networking</span><i></i><span class="c5">Burp Suite</span><i></i><span class="c6">HTML</span><i></i><span class="c1">Wireshark</span><i></i><span class="c2">Nmap</span><i></i>
+  </div></div>
+</div>
+
+<!-- ============ SKILLS ============ -->
+<section class="sec skills" id="skills">
+  <div class="in">
+    <span class="pill-g reveal">My Toolkit</span>
+    <h2 class="h2 reveal">Tech <span class="out">Skills</span></h2>
+    <div class="chips">
+      <span class="chip k-o reveal" style="--rot:-2deg">Burp Suite</span>
+      <span class="chip k-b reveal" style="--rot:2deg">Nmap</span>
+      <span class="chip k-y reveal" style="--rot:-1deg">Python</span>
+      <span class="chip k-b reveal" style="--rot:1.5deg">Pentesting</span>
+      <span class="chip k-p reveal" style="--rot:-2.5deg">Linux</span>
+      <span class="chip k-w reveal" style="--rot:1deg">Networking</span>
+      <span class="chip k-b reveal" style="--rot:3deg">HTML</span>
+      <span class="chip k-g reveal" style="--rot:-2deg">CSS</span>
+      <span class="chip k-g reveal" style="--rot:1.5deg">JavaScript</span>
+      <span class="chip k-c reveal" style="--rot:2.5deg">Wireshark</span>
+      <span class="chip k-o reveal" style="--rot:-3deg">MySQL</span>
+      <span class="chip k-k reveal" style="--rot:3deg">Git</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKS (dummy projects: replace) ============ -->
+<section class="sec works" id="work">
+  <div class="in">
+    <div class="works-hd">
+      <div>
+        <h2 class="h2 sh reveal">Selected<br>Works.</h2>
+        <span class="sub">Stuff I'm proud of.</span>
+      </div>
+      <a class="big" href="#" data-soon aria-label="All projects"><svg class="ico"><use href="#i-ur"/></svg></a>
+    </div>
+
+    <article class="work">
+      <div class="info reveal">
+        <div class="tags"><span class="tag p">HTML</span><span class="tag k">CSS</span><span class="tag g">JavaScript</span></div>
+        <h3>KopiSaas</h3>
+        <p>An online shop for handmade goods. Fast product grid, a slide-in cart, and a checkout flow that stays out of the customer's way.</p>
+       <div class="row">
+    <a
+        class="btn dark sm"
+        href="https://kopisaas.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Live Site
+    </a>
+
+    <a
+        class="btn sm"
+        href="LINK_GITHUB_KAMU"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <svg class="ico">
+            <use href="#i-gh"/>
+        </svg>
+        Code
+    </a>
+</div>
+      </div>
+      <div class="shot reveal">
+        <svg class="bg" viewBox="0 0 400 310" preserveAspectRatio="none" aria-hidden="true"><filter id="fw" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".006 .02" numOctaves="4" seed="11"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="gamma" amplitude="1.2" exponent="2.6" offset="-.03"/><feFuncG type="gamma" amplitude="1.2" exponent="2.6" offset="-.03"/><feFuncB type="gamma" amplitude="1.2" exponent="2.6" offset="-.03"/></feComponentTransfer></filter><rect width="400" height="310" fill="#202020"/><rect width="400" height="310" filter="url(#fw)" opacity=".95"/></svg>
+        <span class="lbl r">Shop</span>
+        <img class="shot-img" src="assets/images/dashboard.png" alt="Dashboard KopiSaas" loading="lazy">
+      </div>
+    </article>
+
+    <article class="work rev">
+      <div class="info reveal">
+        <div class="tags"><span class="tag p">HTML</span><span class="tag k">TailwindCSS</span><span class="tag o">JS</span></div>
+        <h3>Orbit 3D</h3>
+        <p>An interactive product page built around a WebGL scene you can drag and zoom. Smooth transitions and a tiny first load.</p>
+        <div class="row"><a class="btn dark sm" href="#" data-soon>Live Site <svg class="ico"><use href="#i-ur"/></svg></a><a class="btn sm" href="#" data-soon><svg class="ico"><use href="#i-gh"/></svg> Code</a></div>
+      </div>
+      <div class="shot reveal">
+        <svg class="bg" viewBox="0 0 400 310" preserveAspectRatio="none" aria-hidden="true"><filter id="fs" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".012 .008" numOctaves="5" seed="3"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="gamma" amplitude="1.3" exponent="2.8" offset="-.02"/><feFuncG type="gamma" amplitude="1.3" exponent="2.8" offset="-.02"/><feFuncB type="gamma" amplitude="1.3" exponent="2.8" offset="-.02"/></feComponentTransfer></filter><rect width="400" height="310" fill="#1b1b1b"/><rect width="400" height="310" filter="url(#fs)"/></svg>
+        <span class="lbl l">Web3D</span>
+        <svg class="lap" viewBox="0 0 360 215" aria-hidden="true"><use href="#laptop"/>
+          <rect x="72" y="34" width="70" height="5" rx="2" fill="#111"/><rect x="72" y="48" width="92" height="8" rx="2" fill="#111"/><rect x="72" y="60" width="76" height="8" rx="2" fill="#b33"/><rect x="72" y="76" width="82" height="3" rx="1.5" fill="#999"/><rect x="72" y="83" width="70" height="3" rx="1.5" fill="#999"/>
+          <rect x="72" y="104" width="94" height="58" rx="3" fill="#2a2a2a"/><path d="M72 150l22-22 16 14 14-12 22 20v12H72z" fill="#555"/>
+          <rect x="182" y="36" width="104" height="52" rx="4" fill="#e8e1d6"/><rect x="182" y="96" width="104" height="66" rx="4" fill="#ddd5c8"/><circle cx="234" cy="129" r="18" fill="#9B5DE5"/><circle cx="234" cy="129" r="9" fill="#FFD93D"/>
+        </svg>
+      </div>
+    </article>
+
+    <article class="work">
+      <div class="info reveal">
+        <div class="tags"><span class="tag p">HTML</span><span class="tag k">TailwindCSS</span><span class="tag g">GSAP</span></div>
+        <h3>Snake Rush</h3>
+        <p>A browser arcade game with a neon look, combo scoring and a high-score board that remembers your best runs.</p>
+        <div class="row"><a class="btn dark sm" href="#" data-soon>Play Now <svg class="ico"><use href="#i-eye"/></svg></a><a class="btn sm" href="#" data-soon><svg class="ico"><use href="#i-gh"/></svg> Code</a></div>
+      </div>
+      <div class="shot reveal">
+        <svg class="bg" id="polybg" viewBox="0 0 400 310" preserveAspectRatio="none" aria-hidden="true"><rect width="400" height="310" fill="#141414"/></svg>
+        <span class="lbl l">Arcade</span>
+        <svg class="lap" viewBox="0 0 360 215" aria-hidden="true"><use href="#laptop"/>
+          <rect x="60" y="22" width="240" height="150" rx="3" fill="#15121d"/>
+          <path d="M80 40h200M80 70h200M80 100h200M80 130h200M110 30v132M150 30v132M190 30v132M230 30v132M270 30v132" stroke="#2a2440" stroke-width="1"/>
+          <path d="M96 140h64V92h56V64h40" fill="none" stroke="#6BCB77" stroke-width="9" stroke-linejoin="round"/>
+          <path d="M96 140h20" fill="none" stroke="#2f8a3c" stroke-width="9"/>
+          <circle cx="256" cy="64" r="6" fill="#FFD93D"/><circle cx="236" cy="130" r="7" fill="#FF6B6B"/>
+          <rect x="72" y="30" width="54" height="8" rx="4" fill="#9B5DE5"/>
+        </svg>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- EDUCATION -->
+<section class="sec education" id="education">
+  <div class="in">
+    <span class="pill-g reveal">My Journey 🎓</span>
+    <h2 class="h2 reveal">My <span class="out">Education.</span></h2>
+
+    <div class="edu-grid">
+      <article class="edu-card reveal">
+ <div class="edu-icon campus-logo">
+  <img src="assets/images/unpam.png" alt="Logo Kampus">
+</div>
+  <span class="edu-year">2026 — Present</span>
+
+  <h3>UNIVERSITAS PAMULANG</h3>
+
+  <p>
+    Saat ini sedang menempuh pendidikan di bidang Teknik Informatika. Mendalami rekayasa perangkat lunak, pengembangan backend, dan keamanan siber.
+  </p>
+
+  <span class="edu-tag">University Student</span>
+</article>
+
+      <article class="edu-card reveal">
+       <div class="edu-icon campus-logo">
+  <img src="assets/images/ypui.png" alt="Logo Kampus">
+</div>
+        <span class="edu-year">2023 — 2026</span>
+        <h3>SMK YPUI PARUNG</h3>
+        <p>
+          Saya di smk mengambil jurusan Teknik Komputer Jaringan. Saya mempelajari dasar teknologi,
+          pemrograman, jaringan komputer, dan sistem informasi.
+        </p>
+        <span class="edu-tag">Vocational School</span>
+      </article>
+
+      <article class="edu-card reveal">
+        <div class="edu-icon campus-logo">
+  <img src="assets/images/linuxx.png" alt="Logo Kampus">
+</div>
+        <span class="edu-year">2026 — Present</span>
+        <h3>Self Learning</h3>
+        <p>
+          Mendalami Cyber Security, Backend Development,
+          Linux, Database, dan Web Technologies.
+        </p>
+        <span class="edu-tag">Continuous Learning</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="sec achievements" id="achievements">
+  <div class="in">
+    <span class="pill-g reveal">Milestones 🏆</span>
+    <h2 class="h2 reveal">My <span class="out">Achievements.</span></h2>
+
+    <p class="achievement-desc reveal">
+      Every certificate represents a new skill,
+      experience, and step forward.
+    </p>
+
+    <div class="achievement-grid">
+
+      <article class="achievement-card reveal">
+        <button type="button" class="certificate" data-zoom="assets/images/lskk.png" aria-label="Perbesar Sertifikat Kompetensi Microsoft Office">
+          <img src="assets/images/lskk.png" alt="Sertifikat Kompetensi Microsoft Office" loading="lazy">
+        </button>
+        <div class="achievement-info">
+          <span>CERTIFICATE 01</span>
+          <h3>Sertifikat Kompetensi Microsoft Office</h3>
+          <p>LSK SMK YPUI Parung · 2026</p>
+        </div>
+      </article>
+
+      <article class="achievement-card reveal">
+        <button type="button" class="certificate" data-zoom="assets/images/pkll.png" aria-label="Perbesar Certificate of Appreciation (PKL)">
+          <img src="assets/images/pkll.png" alt="Certificate of Appreciation (PKL)" loading="lazy">
+        </button>
+        <div class="achievement-info">
+          <span>CERTIFICATE 02</span>
+          <h3>Certificate of Appreciation (PKL)</h3>
+          <p>PT Idemu Sistem Sinergi · 2025</p>
+        </div>
+      </article>
+
+      <article class="achievement-card reveal">
+        <button type="button" class="certificate" data-zoom="assets/images/pramukaa.png" aria-label="Perbesar Sertifikat Penghargaan Pramuka">
+          <img src="assets/images/pramukaa.png" alt="Sertifikat Penghargaan Pramuka" loading="lazy">
+        </button>
+        <div class="achievement-info">
+          <span>CERTIFICATE 03</span>
+          <h3>Sertifikat Penghargaan Pramuka</h3>
+          <p>Pramuka SMK YPUI Parung · 2024/2025</p>
+        </div>
+      </article>
+
+      <article class="achievement-card reveal">
+        <button type="button" class="certificate" data-zoom="assets/images/ukomm.png" aria-label="Perbesar Uji Kompetensi: Konfigurasi Routing">
+          <img src="assets/images/ukomm.png" alt="Uji Kompetensi: Konfigurasi Routing" loading="lazy">
+        </button>
+        <div class="achievement-info">
+          <span>CERTIFICATE 04</span>
+          <h3>Uji Kompetensi: Konfigurasi Routing</h3>
+          <p>iDentitive · 30 April 2026</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ EXPERIENCE (dummy: replace) ============ -->
+<section class="sec exp" id="experience">
+  <div class="in">
+    <h2 class="h2 sh reveal">Experience</h2>
+    <div class="tl">
+      <div class="job reveal">
+        <span class="date">September 2025 - November 2025</span>
+        <h3>Frontend Developer</h3>
+        <div class="co" style="color:var(--blue)">PT Sidemu Energi (SistemKode)</div>
+        <p>Pengalaman saya pada saat itu sempat Praktik Kerja Lapangan (PKL), di PT Sidemu Energi (SistemKode) selama 3 bulan.</p>
+      </div>
+      <div class="job reveal">
+        <span class="date">2022 - 2026</span>
+        <h3>Content Creator</h3>
+        <div class="co" style="color:var(--coral)">Youtube</div>
+        <p>Dari 2022 sampai saat ini saya masih suka membuat sebuah content di youtube, di youtube saya membahas mengenai cyber security dan seputar teknologi.</p>
+      </div>
+      <div class="job reveal">
+        <span class="date">Juli 2026 - Agustus 2026</span>
+        <h3>IT Support</h3>
+        <div class="co" style="color:var(--green)">PT.Putra Lebak Banten (PLBNET)</div>
+        <p>Saya sempat bekerja selama 3 bulan (training), di perusahaan PLBNET saya menjadi IT Support pada saat itu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS (dummy: replace) ============ -->
+<section class="sec talk" id="testimonials">
+  <div class="in">
+    <h2 class="h2 reveal">Word on the <em>Street</em></h2>
+    <div class="quotes">
+      <figure class="q reveal" style="--rot:-1deg;margin:0">
+        <div class="av" style="background:#8EC5FF"><svg viewBox="0 0 100 100"><path d="M10 100C12 76 30 70 50 70s38 6 40 30z" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="50" cy="48" r="21" fill="#FFE2C6" stroke="#111" stroke-width="3"/><path d="M27 52C22 28 36 20 50 20s28 8 23 32c-4-10-10-16-23-16s-19 6-23 16z" fill="#E8E8EE" stroke="#111" stroke-width="3" stroke-linejoin="round"/><circle cx="43" cy="50" r="2.2" fill="#111"/><circle cx="57" cy="50" r="2.2" fill="#111"/><path d="M44 59q6 5 12 0" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <div class="stars"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div>
+        <blockquote>"Adhitya doesn't just write code. He builds experiences that punch you in the face, in a good way."</blockquote>
+        <b>Client One</b><small>CMO, Company A</small>
+      </figure>
+      <figure class="q mid reveal" style="--rot:1deg;margin-top:26px">
+        <div class="av" style="background:#FF6B6B"><svg viewBox="0 0 100 100"><path d="M10 100C12 76 30 70 50 70s38 6 40 30z" fill="#222" stroke="#111" stroke-width="3"/><circle cx="50" cy="48" r="21" fill="#7a4a35" stroke="#111" stroke-width="3"/><path d="M28 48C24 24 38 17 50 17s26 7 22 31c-4-9-10-13-22-13s-18 4-22 13z" fill="#111" stroke="#111" stroke-width="3" stroke-linejoin="round"/><circle cx="43" cy="50" r="2.2" fill="#fff"/><circle cx="57" cy="50" r="2.2" fill="#fff"/><path d="M44 59q6 4 12 0" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <div class="stars"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico off"><use href="#i-star"/></svg></div>
+        <blockquote>"Fast, reliable and wildly creative. The bold redesign he did for us got people talking."</blockquote>
+        <b>Client Two</b><small>Founder, Company B</small>
+      </figure>
+      <figure class="q reveal" style="--rot:-.6deg;margin:0">
+        <div class="av" style="background:#FF9F1C"><svg viewBox="0 0 100 100"><path d="M10 100C12 76 30 70 50 70s38 6 40 30z" fill="#fff" stroke="#111" stroke-width="3"/><circle cx="50" cy="48" r="21" fill="#FFD2B0" stroke="#111" stroke-width="3"/><path d="M29 46C27 26 38 19 50 19s23 7 21 27c-6-8-12-10-21-10s-15 2-21 10z" fill="#F08A3C" stroke="#111" stroke-width="3" stroke-linejoin="round"/><circle cx="43" cy="51" r="2.2" fill="#111"/><circle cx="57" cy="51" r="2.2" fill="#111"/><path d="M44 60q6 5 12 0" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <div class="stars"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico off"><use href="#i-star"/></svg></div>
+        <blockquote>"I asked for a standard website and got a piece of modern web art. Highly recommended."</blockquote>
+        <b>Client Three</b><small>Director, Company C</small>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE (yellow) ============ -->
+<div class="mq yel" aria-hidden="true">
+  <div class="track"><div class="grp">
+    <span>Let's build something</span><span><svg class="ico fill"><use href="#i-star"/></svg></span>
+    <span>Based in Indonesia</span><span><svg class="ico"><use href="#i-globe"/></svg></span>
+    <span>Available for freelance</span><span><svg class="ico fill"><use href="#i-bolt"/></svg></span>
+  </div></div>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec contact" id="contact">
+  <div class="bg2"></div>
+  <div class="in">
+    <h2 class="h2 reveal"><span class="w">Let's Talk</span><span class="b">Business.</span></h2>
+    <p>Got a project in mind, a freelance gig, or just want to argue about tabs vs spaces? Drop me a line.</p>
+    <div class="contact-btns">
+      <a class="cbtn w" id="emailBtn" href="#"><svg class="ico" style="font-size:18px"><use href="#i-mail"/></svg> Email Me</a>
+     
+<a class="cbtn b youtube" id="liBtn"
+   href="https://youtube.com/@adhityawrdntika?si=pE084xambz3sbZP3"
+   target="_blank"
+   rel="noopener noreferrer">
+
+  <svg class="ico" viewBox="0 0 24 24"
+       width="18" height="18"
+       fill="currentColor">
+    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
+  </svg>
+
+  YouTube
+</a>
+
+      <a class="cbtn p" id="ghBtn" href="#" target="_blank" rel="noopener"><svg class="ico" style="font-size:18px"><use href="#i-gh"/></svg> Github</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="big" aria-hidden="true">CYBER</div>
+  <div class="foot-in">
+    <a class="flogo" href="#home"><span>Adhit<span style="opacity:.55">.DEV</span></span><span class="sm" aria-hidden="true">☺</span></a>
+    <small>© 2026 All rights reserved</small>
+    <button class="top" id="topBtn" aria-label="Back to top"><svg class="ico"><use href="#i-up"/></svg></button>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Your links (email, LinkedIn, GitHub, CV) are edited at the top of js/main.js -->
+<script src="js/main.js"></script>
+<script src="js/ai.js"></script>
+</body>
+</html>
