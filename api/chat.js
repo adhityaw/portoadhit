@@ -68,6 +68,6 @@ module.exports = async (req, res) => {
     res.status(200).json({ reply: text || "Hmm, gw lagi blank. Coba ulangin ya.", mood });
   } catch (e) {
     console.error(e);
-    res.status(502).json({ reply: "Server AI lagi nggak bisa dihubungi, coba lagi nanti ya 🙏" });
+    res.status(502).json({ reply: "Error: " + String(e.message).slice(0, 300) });
   }
 };
