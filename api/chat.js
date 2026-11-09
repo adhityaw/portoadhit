@@ -67,6 +67,7 @@ module.exports = async (req, res) => {
     text = text.replace(/\[\[musik:[^\]]*\]\]/gi, "").trim();
     res.status(200).json({ reply: text || "Hmm, gw lagi blank. Coba ulangin ya.", mood });
   } catch (e) {
+    console.error(e);
     res.status(502).json({ reply: "Server AI lagi nggak bisa dihubungi, coba lagi nanti ya 🙏" });
   }
 };
