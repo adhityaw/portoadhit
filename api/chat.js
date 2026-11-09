@@ -58,7 +58,7 @@ module.exports = async (req, res) => {
         messages: [{ role: "system", content: SYSTEM }, ...msgs],
       }),
     });
-    if (!r.ok) throw new Error("upstream " + r.status);
+    if (!r.ok) throw new Error("upstream " + r.status + " " + (await r.text()).slice(0, 300));
     const data = await r.json();
     let text = (data.choices && data.choices[0] && data.choices[0].message.content) || "";
     let mood = null;
